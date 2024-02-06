@@ -1,0 +1,139 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background :rgb(47, 6, 2);
+    --backgroundItems : #B5E9F0;
+    --backgroundInput:rgb(47, 6, 2);
+    --borderSeparatorTypeB:rgb(247, 70, 122);
+    --textColor:rgb(253, 208, 208);
+
+}
+
+body{
+    background: var(--background);
+}
+p,a{
+    font-family: 'Nunito', sans-serif;
+}
+p{
+    color: var(--textColor);
+    text-align: center;
+}
+
+
+
+fieldset{
+    color: var(--textColor);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+form{
+    width: 60%;
+}
+nav{  
+    padding: 20px;
+}
+
+main,nav{
+    width: 60vw;
+    margin: auto;
+}
+
+
+/* .buttonRecap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px ;
+} */
+button,#ajouter{
+    border: 1px solid var(--borderSeparatorTypeB);
+    color: var(--textColor);
+    background: var(--backgroundInput);
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+#ajouter:hover{
+    background: var(--textColor);
+    color: var(--backgroundInput);
+    transition: .4s;
+}
+#tache{
+    width: 80%;
+    caret-color: var(--backgroundInput);/*couleur du prompt*/
+    border: solid 1px var(--backgroundInput);
+    background:white ;
+    border-radius: 5px;
+    padding: 3px 0;
+    font-size: 16px;
+}
+button{
+    margin: auto;
+    width: 80%;
+
+}
+
+section{
+    margin: auto;
+    padding: 20px;
+    border: solid 1px rgb(247, 70, 122);
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+
+table{ 
+    border-collapse: collapse;
+    margin: auto;
+    width: 100%;
+}
+th{
+    background: var(--backgroundItems);
+    
+}
+th,td{
+    color:var(--textColor);
+    text-align: center;
+}
+th{
+    border: solid 1px var(--borderSeparatorTypeB);
+}
+td{
+    padding: 15px 0;
+    border-bottom: solid 1px var(--borderSeparatorTypeB) ;
+    transform: translateY(30px);
+    animation: apparition 1s ease-in-out forwards;
+    opacity: 0;
+}
+@keyframes apparition {
+    100%{
+        opacity: 1;
+        transform:none;    
+    }
+}
+table a{
+    background: var(--backgroundInput);
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+.fait{
+    color: red;
+    text-decoration: line-through;
+}
+
+
+@media screen and (max-width:644px){
+    nav,main{
+        width: 100%;
+    }
+
+    
+}
